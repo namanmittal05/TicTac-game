@@ -36,4 +36,11 @@ class Game{
     x = Player1;
     y = Player2;
   }
+  public void Toss(){
+    System.out.println("Player1 Choose Heads or Tails");
+    
+  }
+  public void Choose(){
+    System.out.println("Choose between 'X' or 'O' ");
+  }
 }
