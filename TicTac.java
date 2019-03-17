@@ -10,8 +10,7 @@ public class TicTac{
     Welcome.greet();
     Game start = new Game();
     start.inputName();
-    Welcome.greetPlayer();
-    start.show();
+    Welcome.greetPlayer(start.x,start.y);
   }
 }
 class Welcome{
@@ -21,9 +20,9 @@ class Welcome{
     System.out.println("\t  __O_|__X_|__O_");
     System.out.println("\t    X |  O |  X");
   }
-  public static void greetPlayer(){
-    Game call = new Game();
-    System.out.println("Welcome " + " " + call.x + " and " + call.y + "\n" + "Have Fun!");
+  public static void greetPlayer(String player1, String player2){
+    System.out.println("Welcome" + " " + player1 + " and " + player2 + "\n" + "Have Fun!");
+
   }
 }
 class Game{
@@ -36,8 +35,5 @@ class Game{
     String Player2 = input.nextLine();
     x = Player1;
     y = Player2;
-  }
-  public void show(){
-    System.out.println("Hi " + " " + x + " and " + y);
   }
 }
