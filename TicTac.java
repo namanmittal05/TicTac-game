@@ -1,4 +1,5 @@
 import java.util.*;
+import java.lang.Math;
 /*
 TicTac Game
 __X_|__O_|__X_
@@ -11,6 +12,7 @@ public class TicTac{
     Game start = new Game();
     start.inputName();
     Welcome.greetPlayer(start.x,start.y);
+    start.Toss();
   }
 }
 class Welcome{
@@ -37,10 +39,32 @@ class Game{
     y = Player2;
   }
   public void Toss(){
-    System.out.println("Player1 Choose Heads or Tails");
-    
+    //Random rand= new Random();
+    int rand1= (int)Math.random();
+    Scanner input= new Scanner(System.in);
+    System.out.println(x + " " +"Choose either Heads or Tails");
+    String answer = input.nextLine();
+    System.out.println(rand1);
+    if (rand1==0 && answer.equals("Heads")) {
+      System.out.println(x + " " + "Won the toss");
+    }
+    else if(rand1==1 && answer.equals("Tails")){
+      System.out.println(x + " " + "Won the toss");
+    }
+    else {
+      System.out.println(y + " " + "Won the toss");
+    }
+    /*if (answer.equals("Heads")) {
+          System.out.println("You Choose Heads");
+    }
+    else if (answer.equals("Tails")){
+              System.out.println("You Choose Tails");
+    }
+    else{
+        System.out.println("Wrong Choice");
+    }*/
   }
   public void Choose(){
-    System.out.println("Choose between 'X' or 'O' ");
+    System.out.println(x + " " + "Choose between 'X' or 'O' ");
   }
 }
